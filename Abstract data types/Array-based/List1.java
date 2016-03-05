@@ -1,18 +1,16 @@
-package adt_proj;
-
 public class List {
 	private final int STANDART_CAPACITY = 1000;
 	private int[] list;
 	private int size;
 
 	public List() {
-		list = new int[STANDART_CAPACITY];
-		size = 0;
+		this.list = new int[STANDART_CAPACITY];
+		this.size = 0;
 	}
 
 	public List(int capacity) {
-		list = new int[capacity];
-		size = 0;
+		this.list = new int[capacity];
+		this.size = 0;
 	}
 
 	public boolean full() {
@@ -20,12 +18,11 @@ public class List {
 	}
 
 	public boolean empty() {
-		return (0 == size);
+		return (size == 0);
 	}
 
 	public boolean add(int element) {
 		if (full()) {
-			System.out.println("Can`t add an element - list is full.");
 			return (false);
 		}
 		list[size] = element;
@@ -35,7 +32,6 @@ public class List {
 
 	public boolean addByIndex(int index, int element) {
 		if (full()) {
-			System.out.println("Can`t add an element - list is full.");
 			return (false);
 		}
 		for (int i = size; i >= index; i--) {
@@ -48,7 +44,6 @@ public class List {
 
 	public int removeByIndex(int index) {
 		if (empty()) {
-			System.out.println("List is empty. Nothing to delete.");
 			return (0);
 		}
 		int temp = list[index];
@@ -62,7 +57,6 @@ public class List {
 
 	public boolean remove(int element) {
 		if (empty()) {
-			System.out.println("List is empty. Nothing to delete.");
 			return (false);
 		}
 		for (int i = 0; i < size; i++) {
@@ -76,7 +70,6 @@ public class List {
 
 	public int getByIndex(int index) {
 		if (index >= size) {
-			System.out.println("Incorrect index.");
 			return (0);
 		}
 		return (list[index]);
@@ -84,7 +77,6 @@ public class List {
 
 	public void setByIndex(int index, int element) {
 		if (index >= size) {
-			System.out.println("Incorrect index.");
 			return;
 		}
 		list[index] = element;
@@ -103,14 +95,4 @@ public class List {
 			System.out.printf("%d ", list[i]);
 		System.out.println("");
 	}
-
-	/**
-	 * Testing function. <br/>
-	 * 
-	 * @return Capacity of the list.
-	 */
-	public int getSize() {
-		return (size);
-	}
-
 }

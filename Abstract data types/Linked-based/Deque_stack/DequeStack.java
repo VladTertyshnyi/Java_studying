@@ -1,5 +1,3 @@
-package linkedDataTypes;
-
 public class DequeStack {
 	private Linked_Deque D;
 
@@ -20,17 +18,14 @@ public class DequeStack {
 	
 	public int peek() {
 		if(this.D.empty()) {
-			System.out.println("Stack is empty. Nothing to peek.");
 			return (0);
 		}
 		return (this.D.last());
 	}
 	public int pop() {
 		if(empty()) {
-			System.out.println("Stack is empty. Nothing to peek.");
 			return (0);
 		}
 		return (this.D.removeLast());						
 	}
-
 }

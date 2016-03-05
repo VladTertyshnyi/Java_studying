@@ -1,5 +1,3 @@
-package linkedDataTypes;
-
 public class LinkedStack {
 	private Node top;
 	private int size;
@@ -27,7 +25,6 @@ public class LinkedStack {
 
 	public int peek() {
 		if (empty()) {
-			System.out.println("Stack is empty. Nothing to peek.");
 			return (0);
 		}
 		return (this.top.getElement());
@@ -35,7 +32,6 @@ public class LinkedStack {
 
 	public int pop() {
 		if (empty()) {
-			System.out.println("Stack is empty. Nothing to peek.");
 			return (0);
 		}
 		int temp = this.top.getElement();

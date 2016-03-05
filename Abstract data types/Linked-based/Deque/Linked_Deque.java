@@ -1,18 +1,16 @@
-package linkedDataTypes;
-
 public class Linked_Deque {
 	private DLNode header;
 	private DLNode trailer;
 	private int size;
 
 	public Linked_Deque() {
-		header = new DLNode();
-		trailer = new DLNode();
-		header.setNext(trailer);
-		header.setPrev(null);
-		trailer.setPrev(header);
-		trailer.setNext(null);
-		size = 0;
+		this.header = new DLNode();
+		this.trailer = new DLNode();
+		this.header.setNext(trailer);
+		this.header.setPrev(null);
+		this.trailer.setPrev(header);
+		this.trailer.setNext(null);
+		this.size = 0;
 	}
 
 	public int size() {
@@ -25,7 +23,6 @@ public class Linked_Deque {
 
 	public int first() {
 		if (empty()) {
-			System.out.println("Stack is empty. Nothing to peek.");
 			return (0);
 		}
 		return (header.getNext().getElement());
@@ -33,7 +30,6 @@ public class Linked_Deque {
 
 	public int last() {
 		if (empty()) {
-			System.out.println("Stack is empty. Nothing to peek.");
 			return (0);
 		}
 		return (trailer.getPrev().getElement());
@@ -57,7 +53,6 @@ public class Linked_Deque {
 
 	public int removeLast() {
 		if (empty()) {
-			System.out.println("Stack is empty. Nothing to peek.");
 			return (0);
 		}
 		DLNode last = trailer.getPrev();
@@ -71,7 +66,6 @@ public class Linked_Deque {
 
 	public int removeFirst() {
 		if (empty()) {
-			System.out.println("Stack is empty. Nothing to peek.");
 			return (0);
 		}
 		DLNode first = header.getNext();
@@ -82,5 +76,4 @@ public class Linked_Deque {
 		size--;
 		return (temp);
 	}
-
 }

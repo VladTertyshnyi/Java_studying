@@ -1,5 +1,3 @@
-package linkedDataTypes;
-
 public class Node {
 	private int element;
 	private Node next;

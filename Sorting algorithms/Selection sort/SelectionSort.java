@@ -123,7 +123,7 @@ public class SelectionSort {
 		// calculate time after sorting
 		afterSort = getCurrentTime();
 		// print info
-		System.out.println("Sedgwick selection sort:");
+		System.out.println("Standart selection sort:");
 		System.out.println("Swaps used: " + swaps_betterSelection);
 		System.out.printf("Time spent: %.3f s\n\n", (afterSort - beforeSort));
 
